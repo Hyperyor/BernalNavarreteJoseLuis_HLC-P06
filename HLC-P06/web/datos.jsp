@@ -15,21 +15,32 @@
     </head>
     <body>
 
+        <jsp:useBean id="zodiaco" class="modelo.SignoZodiaco" />
+
         <%! Socio s;%>
         <%
-            System.out.println("\nno Encontramos el mapa");
+
             HashMap data = (HashMap) session.getAttribute("datos");
-            System.out.println("\nEncontramos el mapa");
+
             if (data != null) {
-                System.out.println("\nLos datos no son nulos");
 
                 int code = Integer.parseInt(request.getParameter("code"));
 
                 s = (Socio) data.get(code);
+
+                zodiaco.setBirthDate(s.getFechaNacimiento());
             }
         %>
 
         <h1><%= s.getNombre()%></h1>
+
+        <h1><%= s.getApellido()%></h1>
+
+        <h1><%= s.getSueldo()%></h1>
+
+        <h1><%= zodiaco.getSign()%></h1>
+
+        <h1><%= zodiaco.getAge()%> años</h1>
 
     </body>
 </html>

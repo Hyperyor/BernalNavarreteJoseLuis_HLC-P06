@@ -27,8 +27,13 @@
             String ape = request.getParameter("apellido");
             String sueldo = request.getParameter("sueldo");
             String fechanac = request.getParameter("fecha_nac");
+            Float f = 0f;
+            try {
 
-            Float f = Float.parseFloat(sueldo);
+                f = Float.parseFloat(sueldo);
+            } catch (Exception ex) {
+                f = 0f;
+            }
 
             Socio s = new Socio(num + socios.size(), name, ape, f, fechanac);
 

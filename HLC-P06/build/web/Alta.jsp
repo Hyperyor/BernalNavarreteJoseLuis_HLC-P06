@@ -11,15 +11,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="js/controlCampos.js"></script>
         <title>Alta</title>
     </head>
     <body>
 
+        <jsp:useBean id="clock" class="modelo.JspCalendar" />
         <%
-            Calendar fecha = Calendar.getInstance();
-            int dia = fecha.get(Calendar.DAY_OF_MONTH);
-            int mes = fecha.get(Calendar.MONTH) + 1;
-            int anio = fecha.get(Calendar.YEAR);
+            //Calendar fecha = Calendar.getInstance();
+            int dia = clock.getDayOfMonth();
+            int mes = clock.getMonthInt();
+            int anio = clock.getYear();
 
             String cadenaFecha = "" + anio + "-";
 
@@ -40,17 +42,21 @@
             System.out.println("\n" + cadenaFecha);
         %>
 
-        <p>La fecha actual del sistema es <%=dia%> del mes <%=mes%> de <%= anio%></p>
+
+
+        <p>La fecha actual del sistema es <%= dia%> del mes <%= mes%> de <%= anio%></p>
 
         <form action="insercion.jsp">
             <p>Introduce tus datos, por favor</p>
-            <input type="text" name="nombre" placeholder="Nombre"/>
-            <input type="text" name="apellido" placeholder="Apellido"/>
-            <input type="text" name="sueldo" placeholder="Sueldo"/>
-            <input type="date" name="fecha_nac" max="<%=cadenaFecha%>"/>
+            <input id="nombre" type="text" name="nombre" placeholder="Nombre"/>
+            <input id="apellido" type="text" name="apellido" placeholder="Apellido"/>
+            <input id="sueldo" type="text" name="sueldo" placeholder="Sueldo"/>
+            <input id="fecha_nac" type="date" name="fecha_nac" max="<%=cadenaFecha%>"/>
             <!--<input type="hidden" name="sayHello" value="true">-->
-            <input type="submit" value="Enviar"/>
+            <!--<input type="submit" value="Enviar"/>-->
         </form>
+
+        <a href="#" class="enlaceboton" onClick="comprobacion()">Enviar</a>
 
         <p><a href="index.jsp">Volver al indice</a></p>
     </body>
