@@ -65,7 +65,7 @@
         <section id="formulario">
             <div class="row">
                 <!-- Grid column -->
-                <div class="col-md-6 mb-4">
+                <div class="mx-auto">
                     <div class="card">
                         <div class="card-body">
                             <!-- Form contact -->
