@@ -20,19 +20,19 @@
         <title>Alta</title>
     </head>
     <body>
-        
-        <nav class="navbar navbar-expand-lg fixed-top ">  
+
+        <nav class="navbar navbar-expand-lg fixed-top ">
             <a class="navbar-brand" href="index.jsp" >Inicio</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
-            <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">
-                <li class="nav-item">
-                    <a class="nav-link" data-value="alta" href="Alta.jsp">Alta de socio</a>        </li>  
-                <li class="nav-item">
-                    <a class="nav-link " data-value="vis"href="visualizar.jsp">Ver socios</a>    
-                </li>
-                </ul> 
+                    <li class="nav-item">
+                        <a class="nav-link" data-value="alta" href="Alta.jsp">Alta de socio</a>        </li>
+                    <li class="nav-item">
+                        <a class="nav-link " data-value="vis"href="visualizar.jsp">Ver socios</a>
+                    </li>
+                </ul>
             </div>
         </nav>
 
@@ -71,25 +71,28 @@
                             <!-- Form contact -->
                             <form>
                                 <h2 class="text-center py-4 font-bold font-up danger-text">Alta de socio</h2>
+
+                                <h3 class="text-center py-4 font-bold font-up danger-text"><%= dia%> del <%= mes%> de <%= anio%></h3>
+
                                 <div class="md-form">
                                     <i class="fa fa-user prefix grey-text"></i>
                                     <input id="nombre" type="text" name="nombre" class="form-control" placeholder="Nombre">
-                                    
+
                                 </div>
                                 <div class="md-form">
-                                    <i class="fa fa-user prefix grey-text"></i>
+                                    <i class="fa fa-id-card prefix grey-text"></i>
                                     <input id="apellido" type="text" name="apellido" class="form-control" placeholder="Apellido">
-                                    
+
                                 </div>
                                 <div class="md-form">
-                                    <i class="fa fa-credit-card prefix grey-text"></i>
+                                    <i class="fa fa-eur prefix grey-text"></i>
                                     <input id="sueldo" type="text" name="sueldo" class="form-control" placeholder="Sueldo">
-                                   
+
                                 </div>
                                 <div class="md-form">
                                     <i class="fa fa-calendar-o prefix grey-text"></i>
                                     <input id="fecha_nac" type="date" name="fecha_nac" max="<%=cadenaFecha%>" class="form-control">
-                                    
+
                                 </div>
                                 <div class="text-center">
                                     <a href="#" class="enlaceboton" onClick="comprobacion()">Enviar</a>
@@ -104,20 +107,6 @@
         </section>
 
 
-        <p>La fecha actual del sistema es <%= dia%> del mes <%= mes%> de <%= anio%></p>
 
-        <form action="insercion.jsp">
-            <p>Introduce tus datos, por favor</p>
-            <input id="nombre" type="text" name="nombre" placeholder="Nombre"/>
-            <input id="apellido" type="text" name="apellido" placeholder="Apellido"/>
-            <input id="sueldo" type="text" name="sueldo" placeholder="Sueldo"/>
-            <input id="fecha_nac" type="date" name="fecha_nac" max="<%=cadenaFecha%>"/>
-            <!--<input type="hidden" name="sayHello" value="true">-->
-            <!--<input type="submit" value="Enviar"/>-->
-        </form>
-
-        <a href="#" class="enlaceboton" onClick="comprobacion()">Enviar</a>
-
-        <p><a href="index.jsp">Volver al indice</a></p>
     </body>
 </html>
