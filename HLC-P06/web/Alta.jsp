@@ -73,18 +73,18 @@
                                 <h2 class="text-center py-4 font-bold font-up danger-text">Alta de socio</h2>
                                 <div class="md-form">
                                     <i class="fa fa-user prefix grey-text"></i>
-                                    <input id="nombre" type="text" name="nombre" class="form-control">
-                                    <label for="nombre">Nombre</label>
+                                    <input id="nombre" type="text" name="nombre" class="form-control" placeholder="Nombre">
+                                    
                                 </div>
                                 <div class="md-form">
                                     <i class="fa fa-user prefix grey-text"></i>
-                                    <input id="apellido" type="text" name="apellido" class="form-control">
-                                    <label for="apellido">apellido</label>
+                                    <input id="apellido" type="text" name="apellido" class="form-control" placeholder="Apellido">
+                                    
                                 </div>
                                 <div class="md-form">
                                     <i class="fa fa-credit-card prefix grey-text"></i>
-                                    <input id="sueldo" type="text" name="sueldo" class="form-control">
-                                    <label for="sueldo">Sueldo</label>
+                                    <input id="sueldo" type="text" name="sueldo" class="form-control" placeholder="Sueldo">
+                                   
                                 </div>
                                 <div class="md-form">
                                     <i class="fa fa-calendar-o prefix grey-text"></i>
