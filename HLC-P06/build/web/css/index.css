@@ -1,0 +1,81 @@
+
+
+.header{
+    background-image: url('../imagenes/mainback.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+   }
+   .overlay{
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(244, 244, 244, 0.79);
+   }
+
+.description{
+position: absolute;
+top: 30%;
+margin: auto;
+padding: 2em;
+
+}
+
+.description h1{
+ color:#F97300 ;
+}
+.description p{
+ color:#666;
+ font-size: 20px;
+ width: 50%;
+ line-height: 1.5;
+}
+
+.description a{
+    border:1px  solid #F97300;
+    background:#F97300;
+    color:#fff;
+   }
+
+   /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 900px) {
+    .description p {
+      font-size: 30px;
+    }
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 650px) {
+    .description p{
+      font-size: 15px;
+    }
+  }
+
+     /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 900px) {
+    .description h1 {
+      font-size: 40px;
+    }
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 650px) {
+    .description h1{
+      font-size: 20px;
+    }
+  }
+
+   /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+   @media screen and (max-width: 300px) {
+    .description h1{
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    .description p{
+      font-size: 5px;
+    }
+  }
